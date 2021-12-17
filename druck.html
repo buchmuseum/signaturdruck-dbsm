@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBSM Signaturdruck</title>
+    <link rel="stylesheet" href="signaturdruck.css">
+</head>
+
+
+<body>
+    <div class="example-screen">
+        <form id="formular">
+            <label for="zeile1">Zeile 1:
+                <input id="zeile1" type="text" value="DBSM">
+            </label>
+            <br>
+            <label for="zeile2">Zeile 2:
+                <input id="zeile2" type="text" value="Fachbibliothek">
+            </label>
+            <br>
+            <label for="zeile3">Zeile 3:
+                <input id="zeile3" type="text" value="Zeile 3">
+            </label>
+            <br>
+            <label for="zeile4">Zeile 4:
+                <input id="zeile4" type="text" value="Zeile 4">
+            </label>
+            <br>
+            <input type="button" onclick="window.print()" value="Drucken" />
+        </form>
+
+    </div>
+
+    <div class="example-print"><output id="out"></output></div>
+
+</body>
+
+<script src="druck.js"></script>
+
+</html>
