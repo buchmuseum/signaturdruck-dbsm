@@ -1,11 +1,18 @@
-document.querySelector('#formular').addEventListener('input', makelabel);
-
 function makelabel() {
-    var zeile1 = document.getElementById("zeile1").value,
-        zeile2 = document.getElementById("zeile2").value;
+    var zeilen = document.querySelectorAll('#formular input');
+    var labeltext = '';
+    for (let i = 0; i < zeilen.length; i++) {
+        var zeilennummer = i + 1;
+        labeltext += "<div class='zeile' id='z" + zeilennummer + "'>";
+        labeltext += zeilen[i].value;
+        labeltext += "</div>";
+    }
 
-    labels = document.querySelectorAll(".label")
+    var labels = document.querySelectorAll(".label")
     for (var index = 0; index < labels.length; index++) {
-        labels[index].textContent = zeile1 + zeile2;
+        labels[index].innerHTML = labeltext;
     }
 }
+
+makelabel();
+document.querySelector('#formular').addEventListener('input', makelabel);
