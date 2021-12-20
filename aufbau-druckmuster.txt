@@ -1,0 +1,38 @@
+; Aufbau Druckmuster:
+
+x = Buchstaben/Sonderzeichen
+
+n=Zahl  / Bindestrich und Komma  = Zahl 
+
+Zahlen und sonstige Zeichen werden mit '' zu x
+
+
+; Zeile1[#Zeile2]... # als Trennzeichen zwischen Zeilen
+; Zeile: x,y,r,Schrift[,Größe[,Effekte]];{x|n|...}[[Spezialkommandos]]
+;
+; x: Horizontale Position des Textfeldes im Etikett
+; y: Vertikale Position des Textfeldes im Etikett
+; r: Drehrichtung des Textfeldes (0,90,180,270)
+; Schrift: Schriftartennummer (-1,-2,-3,-4,-5,3,5,596)
+; Größe: ptx (x ist Punktgröße für skalierbare Schriften)
+; Effekte:
+; b = Fett
+; u = Unterstrichen
+; i = kursiv
+; n = Negativdruck (inverser Druck)
+; m = geweitet (microspaced)
+;
+; Trennzeichen zwischen Druckformat und Druckzeichen
+; [Spezialkomandos]:
+; [J:ml] : Festlegung der Ausrichtung einer festen Zeichenkettenlänge.
+; m gibt die Ausrichtung an (l=links, c=zentriert, r=rechts)
+; l = Zeichenkettenlänge in mm
+
+
+xnxx
+|5,22,90,3,pt9,b;'DBSM'[J:c22]
+#9,22,90,3,pt7;'Fachbibliothek'[J:c22]
+#15,22,90,3,pt16,b;X[J:c22]
+#21,22,90,3,pt16,b;n[J:c22]
+#27,22,90,3,pt16,b;X[J:c22]
+#33,22,90,3,pt10,b;x[J:c22]
