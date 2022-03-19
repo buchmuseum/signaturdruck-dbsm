@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Druck-Test</title>
+</head>
+<body>
+    <script>
+        ftp = new XMLHttpRequest();
+        ftp.open("GET", "http://");
+        ftp.send("m m\nJ\nH 100\nS l1;0,0,68,70,100\nO R\nT 10,10,0,5,pt20;Beispiel\nB 10,20,0,EAN-13,SC2;401234512345\nG 8,4,0;R:30,9,0.3,0.3\nA 1");
+        ftp.close();
+        </script>
+    
+</body>
+</html>
